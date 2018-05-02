@@ -14,12 +14,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
-<body>
+<body style="background-image: url('http://www.letendanceur.bzh/wp-content/uploads/2016/09/exemple-flat-design.jpg'); background-position: left;
+">
 
-<nav class="navbar navbar-expand-lg navbar-light " >
+<nav class="navbar navbar-expand-lg navbar-light navstyle " >
     <a class="navbar-brand" href="#"><i class="fab fa-cuttlefish"></i>confo S.A.V</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,7 +59,7 @@
 <!--    </p>-->
 <!--</form>-->
 
-
+<div class="allraw">
 <form name="instruction" method="post" action="result.php">
     <div class="container container-input" >
         <div class="row row1input">
@@ -256,7 +258,7 @@
             </div>
         </div>
     </div>
-
+</div>
 
 
 

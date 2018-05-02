@@ -1,5 +1,11 @@
+.navstyle{
+    background-color: rgba(23,162,184,.5);
+}
 .row1input{
     padding: 2em;
+}
+.allraw{
+    background-color: rgba(255, 255, 255,0.35);
 }
 .row2satvend{
     padding-left: 35%;
@@ -17,7 +23,13 @@
     padding-right: 10em;
     padding-left: 10em;
     padding-bottom: 2em;
+
+    background-color: rgba(255, 255, 255,0.35);
+    box-shadow: 5px 10px rgba(0,0,0,0.40);
 }
 .divbottom{
-    padding-left: 45%;
+    background-color: rgba(255, 255, 255,0.10);
+    padding-left: 40%;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
