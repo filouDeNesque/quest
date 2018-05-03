@@ -81,14 +81,14 @@
             <div class="col-lg-4 " >
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><h1>Votre age: </h1></label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="age" id="exampleFormControlSelect1">
                         <option value="16">Moins de 16 ans</option>
                         <?php
                         for($i=16;$i<70;$i++){
                             echo "<option value='$i'>$i ans</option>";
                         }
                         ?>
-                        <option>70</option>
+                        <option value="70">70 ans</option>
                     </select>
                 </div>
             </div>
@@ -273,7 +273,7 @@
         </div>
         <div class="col">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="MontantAchat" id="achat2" value="1">
+                <input class="form-check-input" type="radio" name="MontantAchat" id="achat2" value="2">
                 <label class="form-check-label" for="achat2">
                     <h3>Achat < 200€</h3>
                 </label>
@@ -281,7 +281,7 @@
         </div>
         <div class="col">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="MontantAchat" id="achat3" value="1">
+                <input class="form-check-input" type="radio" name="MontantAchat" id="achat3" value="3">
                 <label class="form-check-label" for="achat3">
                     <h3>Achat < 300€</h3>
                 </label>
@@ -289,7 +289,7 @@
         </div>
         <div class="col">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="MontantAchat" id="achat4" value="1">
+                <input class="form-check-input" type="radio" name="MontantAchat" id="achat4" value="4">
                 <label class="form-check-label" for="achat4">
                     <h3>Achat < 500€</h3>
                 </label>
@@ -297,7 +297,7 @@
         </div>
         <div class="col">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="MontantAchat" id="achat5" value="1">
+                <input class="form-check-input" type="radio" name="MontantAchat" id="achat5" value="5">
                 <label class="form-check-label" for="achat5">
                     <h3>Achat < 1000€</h3>
                 </label>
@@ -305,7 +305,7 @@
         </div>
         <div class="col">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="MontantAchat" id="achat6" value="1" />
+                <input class="form-check-input" type="radio" name="MontantAchat" id="achat6" value="6" />
                 <label class="form-check-label" for="achat6">
                     <h3>Achat > 1000€</h3>
                 </label>
