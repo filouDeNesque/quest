@@ -61,27 +61,26 @@
 
 <div class="allraw">
 <form name="instruction" method="post" action="result.php">
-    <div class="container container-input" >
-        <div class="row row1input">
-            <div class="col-lg-4" >
 
+        <div class="row ">
+            <div class="col-lg-4" >
                 <div class="form-group">
                     <h1><label>	Votre nom : </label></h1>
-                    <input type="text" name="nom" class= "form-control" id="name" placeholder="Ex: Polo" />
+                    <input type="text" name="nom" class= "form-control" id="nom" placeholder="Ex: Polo" />
                 </div>
             </div>
 
             <div class="col-lg-4" >
                 <div class="form-group">
-                    <h1><label>Votre ...</label></h1>
-                    <input type="text" name="unknom" class="form-control" id="ville" placeholder="Ex: .... "/>
+                    <h1><label for="love">Votre ...</label></h1>
+                    <input type="text" name="love" class="form-control" id="love" placeholder="Ex: .... " />
                 </div>
             </div>
 
             <div class="col-lg-4 " >
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1"><h1>Votre age: </h1></label>
-                    <select class="form-control" name="age" id="exampleFormControlSelect1">
+                    <h1><label for="age">Votre age: </label></h1>
+                    <select class="form-control"  name="age" id="age">
                         <option value="16">Moins de 16 ans</option>
                         <?php
                         for($i=16;$i<70;$i++){
@@ -93,7 +92,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
 
 
@@ -101,7 +100,7 @@
 
     <!-- premier formulaire 1 I) -->
     <div class="row justify-content-center row2satvend" >
-        <div class="col-lg-12 radiobox1 " <body>
+        <div class="col-lg-12 radiobox1 ">
 
         <h1>Satisfaction vendeur</h1>
         <div class="form-check form-check-inline">

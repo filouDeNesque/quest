@@ -10,18 +10,29 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 
-if(isset($_POST['prenom'])) {
-    $nom = strtoupper($_POST['prenom']);
-    echo $nom;
-    echo 'shtroumpf';
-    $req = $pdo->prepare("INSERT INTO test1 (nom) VALUE (:nom)");
-    $req->execute(array(
-        "nom" => $nom
-    ));
-}
-else{
+$nom = isset($_POST['nom']) ? $_POST['nom'] : NULL;
+$love = isset($_POST['love']) ? $_POST['love'] : NULL;
+$age = isset($_POST['age']) ? $_POST['age'] : NULL;
+$satv = isset($_POST['SatisfactionVendeur']) ? $_POST['SatisfactionVendeur'] : NULL;
+$satd = isset($_POST['SatisfactionDepot']) ? $_POST['SatisfactionDepot'] : NULL;
+$satc = isset($_POST['Satisfactioncaisse']) ? $_POST['Satisfactioncaisse'] : NULL;
+$monta = isset($_POST['MontantAchat']) ? $_POST['MontantAchat'] : NULL;
 
-}
+echo $nom.$satc.$satv.$satd.$monta.$age;
+echo $love;
+echo $age;
+
+$req = $pdo->prepare("INSERT INTO test2 (nom, love, age, SatisfactionVendeur, SatisfactionDepot, Satisfactioncaisse, MontantAchat) 
+                                VALUE (:nom, :love, :age, :SatisfactionVendeur, :SatisfactionDepot, :Satisfactioncaisse, :MontantAchat)");
+$req->execute(array(
+    "nom" => $nom,
+    "love" => $love,
+    "age" => $age,
+    "SatisfactionVendeur" => $satv,
+    "SatisfactionDepot" => $satd,
+    "Satisfactioncaisse" => $satc,
+    "MontantAchat" => $monta
+));
 ?>
 
 <!doctype html>
