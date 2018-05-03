@@ -1,0 +1,50 @@
+.navstyle{
+    background-color: rgba(23,162,184,.5);
+}
+.rowtitle{
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    box-shadow: 5px 10px rgba(0,0,0,0.7);
+
+    text-align: center;
+}
+.rowavis{
+    padding: 2em;
+}
+.boxy1{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.containercount{
+
+}
+.container{
+    margin-right: -10em;
+    width: 37em;
+    padding: 1em;
+    display: inline;
+    left: 10%;
+    position: absolute;
+
+
+}
+.bloc{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+
+    float: left;
+    width: 15%;
+    length: 15%;
+    padding: 2em;
+    margin: 0.25em;
+
+    border-color: aqua;
+    background-color: black;
+    box-shadow: 5px 10px rgba(0,0,0,0.40);
+}
+.titlecount {
+    text-align: center;
+}
+

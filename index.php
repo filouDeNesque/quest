@@ -33,7 +33,7 @@
                 <a class="nav-link" href="#"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="far fa-smile"></i>Happy-client <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost/quest/index.php"><i class="far fa-smile"></i>Happy-client <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-wrench"></i>S.A.V <span class="sr-only">(current)</span></a>
@@ -129,7 +129,7 @@
             <input class="form-check-input" type="radio" name="SatisfactionVendeur" id="faible" value="2">
             <label class="form-check-label" for="faible">
                 <div class="skillbox">
-                    <p>Excelent 25%</p>
+                    <p>faible 25%</p>
                     <div class="skill">
                         <div class="skill_level" style="width: 25%"></div>
                     </div>
@@ -140,7 +140,7 @@
             <input class="form-check-input" type="radio" name="SatisfactionVendeur" id="nul" value="1">
             <label class="form-check-label" for="nul">
                 <div class="skillbox">
-                    <p>faible 2%</p>
+                    <p>mediocre 2%</p>
                     <div class="skill">
                         <div class="skill_level" style="width: 2%"></div>
                     </div>
@@ -183,7 +183,7 @@
                 <input class="form-check-input" type="radio" name="SatisfactionDepot" id="faible1" value="2">
                 <label class="form-check-label" for="faible1">
                     <div class="skillbox">
-                        <p>Excelent 25%</p>
+                        <p>faible 25%</p>
                         <div class="skill">
                             <div class="skill_level" style="width: 25%"></div>
                         </div>
@@ -194,7 +194,7 @@
                 <input class="form-check-input" type="radio" name="SatisfactionDepot" id="nul1" value="1">
                 <label class="form-check-label" for="nul1">
                     <div class="skillbox">
-                        <p>faible 2%</p>
+                        <p>mediocre 2%</p>
                         <div class="skill">
                             <div class="skill_level" style="width: 2%"></div>
                         </div>
@@ -237,7 +237,7 @@
                 <input class="form-check-input" type="radio" name="Satisfactioncaisse" id="faible3" value="2">
                 <label class="form-check-label" for="faible3">
                     <div class="skillbox">
-                        <p>Excelent 25%</p>
+                        <p>moyen 25%</p>
                         <div class="skill">
                             <div class="skill_level" style="width: 25%"></div>
                         </div>
@@ -248,7 +248,7 @@
                 <input class="form-check-input" type="radio" name="Satisfactioncaisse" id="nul3" value="1">
                 <label class="form-check-label" for="nul3">
                     <div class="skillbox">
-                        <p>faible 2%</p>
+                        <p>mediocre 2%</p>
                         <div class="skill">
                             <div class="skill_level" style="width: 2%"></div>
                         </div>
