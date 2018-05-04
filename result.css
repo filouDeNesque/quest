@@ -1,10 +1,13 @@
 .navstyle{
     background-color: rgba(23,162,184,.5);
+    position: inherit;
+    margin-right: 1%;
 }
 .rowtitle{
+    position: inherit;
     padding-top: 2em;
     padding-bottom: 2em;
-
+margin-right: 4%;
     box-shadow: 5px 10px rgba(0,0,0,0.7);
 
     text-align: center;
@@ -20,24 +23,24 @@
 
 }
 .container{
-    margin-right: -10em;
-    width: 37em;
+
+
     padding: 1em;
-    display: inline;
-    left: 10%;
-    position: absolute;
+
+align-content: center;
+    position: inherit;
 
 
 }
 .bloc{
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
 
-    float: left;
-    width: 15%;
-    length: 15%;
-    padding: 2em;
+    float: right;
+    width: 10%;
+    height: 10%;
+    padding: 1em;
     margin: 0.25em;
 
     border-color: aqua;

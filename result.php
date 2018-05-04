@@ -18,9 +18,9 @@ $satd = isset($_POST['SatisfactionDepot']) ? $_POST['SatisfactionDepot'] : NULL;
 $satc = isset($_POST['Satisfactioncaisse']) ? $_POST['Satisfactioncaisse'] : NULL;
 $monta = isset($_POST['MontantAchat']) ? $_POST['MontantAchat'] : NULL;
 
-echo $nom.$satc.$satv.$satd.$monta.$age;
-echo $love;
-echo $age;
+//echo $nom.$satc.$satv.$satd.$monta.$age;
+//echo $love;
+//echo $age;
 
 $req = $pdo->prepare("INSERT INTO test2 (nom, love, age, SatisfactionVendeur, SatisfactionDepot, Satisfactioncaisse, MontantAchat) 
                                 VALUE (:nom, :love, :age, :SatisfactionVendeur, :SatisfactionDepot, :Satisfactioncaisse, :MontantAchat)");
@@ -33,6 +33,58 @@ $req->execute(array(
     "Satisfactioncaisse" => $satc,
     "MontantAchat" => $monta
 ));
+
+
+//compteur
+$sel = $pdo->query("SELECT * FROM test2");
+$count = $sel->rowCount();
+echo $count.' Avis';
+
+$units = substr($count, -1);
+if ($count>10){
+
+    $diz = substr($count,-2, 1);
+}else{
+    $diz = 0;
+}
+if ($count>100){
+
+    $cent = substr($count,-3, 1);
+}else{
+    $cent = 0;
+}
+if ($count>1000){
+
+    $mill = substr($count,-4, 1);
+}else{
+    $mill = 0;
+}
+
+
+//calcul de moyenne
+
+$requeteNombreMembres = $pdo->query('SELECT * FROM test2');
+$data = $requeteNombreMembres->fetchAll(PDO::PARAM_STR);
+$satve = 0;
+$satca= 0;
+$satde= 0;
+$i= 0;
+
+for ($i= 0;$i<$count;$i++){
+
+    $strdata = intval($data[$i]['SatisfactionVendeur']);
+    $strca = intval($data[$i]['Satisfactioncaisse']);
+    $strde = intval($data[$i]['SatisfactionDepot']);
+
+    $satve= $satve + $strdata *25;
+    $satca= $satca + $strca *25;
+    $satde = $satde + $strde *25;
+
+}
+
+$satglob = intval((($satca+$satve+$satve)/3)/100);
+echo '  $data = '.$satve/100;
+
 ?>
 
 <!doctype html>
@@ -94,7 +146,7 @@ $req->execute(array(
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <div class="progress" >
                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70"
-                         aria-valuemin="0" aria-valuemax="100" style="width:82%">
+                         aria-valuemin="0" aria-valuemax="100" style="width:<?= $satve/100 ?>%">
                         <span class="sr-only">70% Complete</span>
                     </div>
                 </div>
@@ -112,7 +164,7 @@ $req->execute(array(
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <div class="progress" >
                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
-                         aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                         aria-valuemin="0" aria-valuemax="100" style="width:<?=$satde/100?>%">
                         <span class="sr-only">70% Complete</span>
                     </div>
                 </div>
@@ -130,7 +182,7 @@ $req->execute(array(
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <div class="progress" >
                     <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
-                         aria-valuemin="0" aria-valuemax="100" style="width:47%">
+                         aria-valuemin="0" aria-valuemax="100" style="width:<?=$satca/100?>%">
                         <span class="sr-only">70% Complete</span>
                     </div>
                 </div>
@@ -146,25 +198,35 @@ $req->execute(array(
 
         <div class="titlecount"><h2>Nombre d'avis à ce jour</h2></div>
         <div class="container">
-        <div class="bloc"><p>0</p></div>
-        <div class="bloc"><p>0</p></div>
-        <div class="bloc"><p>0</p></div>
-        <div class="bloc"><p>1</p></div>
-        <div class="bloc"><p>2</p></div>
+        <div class="bloc"><p><?=$units ?></p></div>
+        <div class="bloc"><p><?=$diz ?></p></div>
+        <div class="bloc"><p><?=$cent ?></p></div>
+        <div class="bloc"><p><?=$mill ?></p></div>
         </div>
 
 
-        <div class="boxy1" style="padding-top: 11em;">
+        <div class="boxy1" style="padding-top: 9em;">
             <div class="card text-center ">
                 <div class="card-header ">
-                    <h2>Satisfaction caisse</h2>
+                    <h2>Satisfaction Global</h2>
+                        <h3><?= $satglob?> %</h3>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">
+                        <?php
+                        echo 'hello';
+                        $sel = $pdo->prepare('SELECT * FROM test2');
+                        while ($donnees = $sel->fetch()){
+                            echo $donnees['nom'];
+                            echo $donnees['MontantAchat'];
+                        }
+                        $sel->closeCursor();
+                        ?>
+                        With supporting text below as a natural lead-in to additional content.</p>
                     <div class="progress" >
                         <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                             aria-valuemin="0" aria-valuemax="100" style="width:<?= $satglob?>%">
                             <span class="sr-only">70% Complete</span>
                         </div>
                     </div>
