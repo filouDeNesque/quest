@@ -5,6 +5,9 @@
  * Date: 01/05/2018
  * Time: 10:43
  */
+
+include 'test.php';
+
 $pdo = new PDO('mysql:host=localhost; dbname=quest','root','');
 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
@@ -142,8 +145,8 @@ echo '  $data = '.$satve/100;
                 <h2>Satisfaction vendeur</h2>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h5 class="card-title">Le vendeur</h5>
+                <p class="card-text"> Exerce la vente  : il échange un bien de consommation ou un service marchand contre de l'argent. Étymologiquement, le mot "vendre" vient de venes dare, « donner vénalement, contre argent ». Le secteur d'activité économique est le secteur tertiaire</p>
                 <div class="progress" >
                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70"
                          aria-valuemin="0" aria-valuemax="100" style="width:<?= $satve/100 ?>%">
@@ -160,8 +163,8 @@ echo '  $data = '.$satve/100;
                 <h2>Satisfaction depôt</h2>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h5 class="card-title">Magasinier</h5>
+                <p class="card-text">Le magasinier exerce une activité entendue tantôt au sens large (opérations de magasinage) tantôt selon un sens plus restreint (gestion de stock) en un lieu (un magasin, un entrepôt de fabrication ou de distribution) où sont entreposées des marchandises (produits finis, semi-finis, pièces de rechange, etc.) destinées à être mises à disposition et/ou acheminées pour être utilisées par des consommateurs intermédiaires ou finaux.</p>
                 <div class="progress" >
                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
                          aria-valuemin="0" aria-valuemax="100" style="width:<?=$satde/100?>%">
@@ -178,8 +181,8 @@ echo '  $data = '.$satve/100;
                 <h2>Satisfaction caisse</h2>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h5 class="card-title">Caissier</h5>
+                <p class="card-text">Le métier de caissier ou hôte de caisse consiste à tenir la caisse d'une entreprise ou d'une administration : l'exemple le plus connu est le caissier d'une grande surface.</p>
                 <div class="progress" >
                     <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
                          aria-valuemin="0" aria-valuemax="100" style="width:<?=$satca/100?>%">
@@ -190,6 +193,8 @@ echo '  $data = '.$satve/100;
             </div>
         </div>
         </div>
+
+        <?php  ?>
 
 
     </div>
@@ -212,7 +217,7 @@ echo '  $data = '.$satve/100;
                         <h3><?= $satglob?> %</h3>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Conforama</h5>
                     <p class="card-text">
                         <?php
                         echo 'hello';
@@ -223,7 +228,7 @@ echo '  $data = '.$satve/100;
                         }
                         $sel->closeCursor();
                         ?>
-                        With supporting text below as a natural lead-in to additional content.</p>
+                        Au début des années 1960, Pierre et Guy Sordoillet, Jean Moll et Jacques Ragageot, appuyés par des marchands de meubles du nord et par un fabricant bordelais : Charles Minvielle, créent le "carrefour du meuble" en testant une formule de discount dans les dépendances d'une vieille ferme de la banlieue de Lyon. Dès 1967, un premier Conforama est ouvert à Saint-Priest dans un bâtiment industriel de 2 500 m2 de surface.</p>
                     <div class="progress" >
                         <div class="progress-bar" role="progressbar" aria-valuenow="70"
                              aria-valuemin="0" aria-valuemax="100" style="width:<?= $satglob?>%">
@@ -231,6 +236,26 @@ echo '  $data = '.$satve/100;
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+
+
+        <div class="boxy1">
+            <div class="card text-center ">
+                <div class="card-header ">
+                    <h2>Satisfaction caisse</h2>
+                </div>
+                <div class="card-body">
+                    <form action="comment.php" method="post">
+                    <p class="card-text">
+                    <div class="form-group">
+                        <label for="comment"><h5 class="card-title">Caissier</h5></label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                    </p>
+                        <button class="btn btn-primary" type="submit">Commentez !</button>
+                    </form>
                 </div>
             </div>
         </div>
