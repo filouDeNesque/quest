@@ -193,10 +193,6 @@ echo '  $data = '.$satve/100;
             </div>
         </div>
         </div>
-
-        <?php  ?>
-
-
     </div>
 
     <div class="col-lg-5 col-sm-12 col-md-12" style="background-color:rgba(5,120,255,0.07); padding-top: 2em" >

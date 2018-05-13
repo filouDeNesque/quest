@@ -19,18 +19,11 @@ margin-right: 4%;
     padding-top: 1em;
     padding-bottom: 1em;
 }
-.containercount{
-
-}
 .container{
-
-
     padding: 1em;
 
-align-content: center;
+    align-content: center;
     position: inherit;
-
-
 }
 .bloc{
     text-align: center;
@@ -50,4 +43,3 @@ align-content: center;
 .titlecount {
     text-align: center;
 }
-
