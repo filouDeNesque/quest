@@ -5,7 +5,7 @@
  * Date: 09/05/2018
  * Time: 21:32
  */
-use \PDO;
+
 class Database{
     private $db_name;
     /**
@@ -41,17 +41,17 @@ class Database{
     private function getPDO()
     {
         if($this->pdo === null){
-            $pdo = new PDO('mysql:dbname=blog;host=localhost','root','');
+            $pdo = new PDO('mysql:dbname=quest;host=localhost','root','');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo = $pdo;
         }
         return $this->pdo;
     }
 
-    function postform($nom,$prenom,$age,$satd,$satc,$satv,$monta = 0){
+    function postform($nom, $prenom, $age, $satd, $satv, $satc, $monta = 3){
 
-        $req = $this->pdo->prepare("INSERT INTO test2 (nom, prenom, age, SatisfactionVendeur, SatisfactionDepot, Satisfactioncaisse, MontantAchat) 
-                                VALUE (:nom, :prenom, :age, :SatisfactionVendeur, :SatisfactionDepot, :Satisfactioncaisse, :MontantAchat)");
+        $req = $this->getPDO()->prepare("INSERT INTO test2 (nom, love, age, SatisfactionVendeur, SatisfactionDepot, Satisfactioncaisse, MontantAchat) 
+                                VALUE (:nom, :love, :age, :SatisfactionVendeur, :SatisfactionDepot, :Satisfactioncaisse, :MontantAchat)");
         $req->execute(array(
             "nom" => $nom,
             "love" => $prenom,

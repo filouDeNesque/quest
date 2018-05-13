@@ -22,10 +22,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost/quest/index.php?p=home"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost/quest/index.php"><i class="far fa-smile"></i>Happy-client <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost/quest/index.php?p=comment"><i class="far fa-smile"></i>Happy-client <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-wrench"></i>S.A.V <span class="sr-only">(current)</span></a>
